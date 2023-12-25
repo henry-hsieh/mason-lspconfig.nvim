@@ -33,7 +33,7 @@ function M.setup(config)
         log.error("Failed to set up lspconfig integration.", err)
     end
 
-    if not platform.is_headless and #settings.current.ensure_installed > 0 then
+    if #settings.current.ensure_installed > 0 then
         require "mason-lspconfig.ensure_installed"()
     end
 
